@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <title>César - Portfolio</title>
+        <meta name="description" content="Desarrollador Back-End apasionado por la programacion.">
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/ico+xml" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css"/>
+        <script type="module">
+            const e = document.getElementById("email")
+              , o = document.getElementById("discord")
+              , i = document.getElementById("button-copy-email")
+              , n = document.getElementById("button-copy-discord");
+            i?.addEventListener("click", ()=>{
+                if (e) {
+                    navigator?.clipboard.writeText(e.value);
+                    let t = document.getElementById("tooltip-email");
+                    t.innerHTML = "Copiado"
+                }
+            }
+            );
+            n?.addEventListener("click", ()=>{
+                if (o) {
+                    navigator?.clipboard.writeText(o.value);
+                    let t = document.getElementById("tooltip-discord");
+                    t.innerHTML = "Copiado"
+                }
+            }
+            );
+            i?.addEventListener("mouseleave", ()=>{
+                let t = document.getElementById("tooltip-email");
+                t.innerHTML = "Copiar"
+            }
+            );
+            n?.addEventListener("mouseleave", ()=>{
+                let t = document.getElementById("tooltip-discord");
+                t.innerHTML = "Copiar"
+            }
+            );
+        </script>
+    </head>
+    <body class="relative h-full w-full bg-slate-white bg-slate-950 text-gray-200 font-lato pb-4">
+        <div class="fixed bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
+        <header class="flex justify-center items-center mx-auto sticky bottom-0 md:top-0 w-full md:w-[720px] py-5 z-10">
+            <nav class="hidden md:flex gap-1 bg-gray-900/50 backdrop-blur-md px-4 py-0.5 rounded-full text-xl">
+                <a href="/#sobre-mi" class="py-0.5 px-4 rounded-full transition duration-300 ease-in-out hover:text-sky-300">Sobre mí</a>
+                <a href="/#social" class="py-0.5 px-4 rounded-full transition duration-300 ease-in-out hover:text-sky-300">Social</a>
+                <a href="/#proyectos" class="py-0.5 px-4 rounded-full transition duration-300 ease-in-out hover:text-sky-300">Proyectos</a>
+                <a href="/#contacto" class="py-0.5 px-4 rounded-full transition duration-300 ease-in-out hover:text-sky-300">Contacto</a>
+            </nav>
+        </header>
+        <main class="relative px-4">
+            <section id="sobre-mi" class="w-full md:w-[720px] container mx-auto pt-32 pb-20">
+                <img class="size-20 rounded-full" src="https://avatars.githubusercontent.com/u/87192079?v=4" alt="Imagen de perfil">
+                <article class="mt-8 mb-8">
+                    <h2 class="flex gap-2 items-center text-4xl md:text-5xl font-extrabold mb-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="size-10 md:size-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7 8l-4 4l4 4"></path>
+                            <path d="M17 8l4 4l-4 4"></path>
+                            <path d="M14 4l-4 16"></path>
+                        </svg>
+                        <span>César Diego</span>
+                    </h2>
+                    <p class="text-2xl text-balance text-gray-300/90">
+                        No soy un robot, <span class="text-sky-300"> soy un desarrollador Back-End</span>
+                        apasionado por 
+                        <span class="text-yellow-300">la programación</span>
+                     .
+
+                    </p>
+                </article>
+            </section>
+            <section id="social" class="w-full md:w-[720px] container mx-auto pb-20">
+                <h2 class="flex gap-2 items-center text-4xl md:text-5xl font-extrabold mb-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-10 md:size-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28"></path>
+                    </svg>
+                    <span>Social</span>
+                </h2>
+                <nav class="w-full grid grid-cols-4 gap-2 md:gap-4">
+                    <a class="col-span-2 md:col-span-1 border-2 bg-slate-900 border-slate-700 rounded-2xl p-4 text-center text-lg md:text-xl font-bold flex items-center gap-2 transition ease-in-out duration-300 hover:border-slate-600" href="https://github.com/Cesard1" target="_blank">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 md:size-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                            </svg>
+                        </span>
+                        <span class="text-center">Github</span>
+                    </a>
+                    <a class="col-span-2 md:col-span-1 text-blue-400 border-2 bg-slate-900 border-slate-700 rounded-2xl p-4 text-center text-lg md:text-xl font-bold flex items-center gap-2 transition ease-in-out duration-300 hover:border-slate-600" href="https://www.linkedin.com/in/césar-diego-hernández-martínez-38517a239/" target="_blank">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5 md:size-8" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path>
+                                <path d="M8 11l0 5"></path>
+                                <path d="M8 8l0 .01"></path>
+                                <path d="M12 16l0 -5"></path>
+                                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+                            </svg>
+                        </span>
+                        <span class="text-center">Likendin</span>
+                    </a>
+                </nav>
+            </section>
+            <section id="proyectos" class="w-full md:w-[720px] container mx-auto py-8">
+                <h2 class="flex gap-2 items-center text-4xl md:text-5xl font-extrabold mb-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-10 md:size-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8.243 7.34l-6.38 .925l-.113 .023a1 1 0 0 0 -.44 1.684l4.622 4.499l-1.09 6.355l-.013 .11a1 1 0 0 0 1.464 .944l5.706 -3l5.693 3l.1 .046a1 1 0 0 0 1.352 -1.1l-1.091 -6.355l4.624 -4.5l.078 -.085a1 1 0 0 0 -.633 -1.62l-6.38 -.926l-2.852 -5.78a1 1 0 0 0 -1.794 0l-2.853 5.78z" stroke-width="0" fill="currentColor"></path>
+                    </svg>
+                    <span>Proyectos</span>
+                </h2>
+                <ul class="grid grid-cols-4 gap-y-20">
+                    <li class="col-span-4 grid grid-cols-6 gap-5 place-items-center group/item">
+                        <article class="col-span-6 md:col-span-3 relative rounded-xl overflow-hidden bg-slate-800">
+                            <a href="https://github.com/Cesard1/ATM" target="_blank">
+                                <img class="transition-transform duration-300 w-full h-full object-cover ease-in-out group-hover/item:scale-110" src="ATM.png" alt="Proyecto: ATM">
+                            </a>
+                        </article>
+                        <div class="col-span-6 md:col-span-3">
+                            <article class="">
+                                <h2 class="text-sky-300 text-2xl md:text-3xl font-extrabold mb-4">ATM</h2>
+                                <p class="text-xl md:text-lg text-gray-300/90 text-pretty">Aplicacion de un cajero automatico con todas sus funcionalidades.</p>
+                            </article>
+                            <ul class="flex gap-2 flex-wrap items-center my-4">                               
+                            <!-- poner logos aca abajo -->
+                            </ul>
+                            <div class="flex w-full gap-4">
+                                <a href="https://www.mediafire.com/file/loh7l2rpcbh0nvj/ATM.zip/file" target="_blank" class="flex flex-row-reverse items-center gap-2 px-4 py-2 bg-zinc-300 text-black text-lg md:text-xl font-bold rounded-lg group/hover">
+                                    <span>
+                                        <svg class="size-5 duration-300 ease-in-out transition group-hover/hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                                            <path d="M11 13l9 -9"></path>
+                                            <path d="M15 4h5v5"></path>
+                                        </svg>
+                                    </span>
+                                    Live
+
+                                </a>
+                                <a href="https://github.com/Cesard1/ATM" target="_blank" class="flex flex-row-reverse items-center gap-2 px-4 py-2 bg-zinc-300 text-black text-lg md:text-xl font-bold rounded-lg group/hover">
+                                    <span>
+                                        <svg class="size-5 duration-300 ease-in-out transition group-hover/hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M9 15l6 -6"></path>
+                                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
+                                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
+                                        </svg>
+                                    </span>
+                                    Code
+
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-span-4 grid grid-cols-6 gap-5 place-items-center group/item">
+                        <article class="col-span-6 md:col-span-3 relative rounded-xl overflow-hidden bg-slate-800">
+                            <a href="https://github.com/Cesard1/TikTacToe-Game" target="_blank">
+                                <img class="transition-transform duration-300 w-full h-full object-cover ease-in-out group-hover/item:scale-110" src="TIKTACTOE.png" alt="Proyecto: TikTacToe">
+                            </a>
+                        </article>
+                        <div class="col-span-6 md:col-span-3">
+                            <article class="">
+                                <h2 class="text-sky-300 text-2xl md:text-3xl font-extrabold mb-4">TikTacToe</h2>
+                                <p class="text-xl md:text-lg text-gray-300/90 text-pretty">
+                                    
+Tic Tac Toe es un juego clásico donde dos jugadores compiten por alinear tres fichas en una cuadrícula de 3x3 antes que el oponente.</p>
+                            </article>
+                            <ul class="flex gap-2 flex-wrap items-center my-4">
+                                <!-- poner logo -->
+                                
+                            </ul>
+                            <div class="flex w-full gap-4">
+                                <a href="https://www.mediafire.com/file/ezlgigy2ys90xuj/mysetupTIKTACTOE.exe/file" target="_blank" class="flex flex-row-reverse items-center gap-2 px-4 py-2 bg-zinc-300 text-black text-lg md:text-xl font-bold rounded-lg group/hover">
+                                    <span>
+                                        <svg class="size-5 duration-300 ease-in-out transition group-hover/hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                                            <path d="M11 13l9 -9"></path>
+                                            <path d="M15 4h5v5"></path>
+                                        </svg>
+                                    </span>
+                                    Live
+
+                                </a>
+                                <a href="https://github.com/Cesard1/TikTacToe-Game" target="_blank" class="flex flex-row-reverse items-center gap-2 px-4 py-2 bg-zinc-300 text-black text-lg md:text-xl font-bold rounded-lg group/hover">
+                                    <span>
+                                        <svg class="size-5 duration-300 ease-in-out transition group-hover/hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M9 15l6 -6"></path>
+                                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
+                                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
+                                        </svg>
+                                    </span>
+                                    Code
+
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-span-4 grid grid-cols-6 gap-5 place-items-center group/item">
+                        <article class="col-span-6 md:col-span-3 relative rounded-xl overflow-hidden bg-slate-800">
+                            <a href="https://github.com/Cesard1/Sistema-ventas" target="_blank">
+                                <img class="transition-transform duration-300 w-full h-full object-cover ease-in-out group-hover/item:scale-110" src="Ventas.png" alt="Proyecto: punto de ventas">
+                            </a>
+                        </article>
+                        <div class="col-span-6 md:col-span-3">
+                            <article class="">
+                                <h2 class="text-sky-300 text-2xl md:text-3xl font-extrabold mb-4">Punto de Ventas</h2>
+                                <p class="text-xl md:text-lg text-gray-300/90 text-pretty">Una aplicación de ventas que ayuda a registrar y gestionar las transacciones de ventas de productos o servicios, incluyendo funciones como ventas, inventario y reportes.</p>
+                            </article>
+                            <ul class="flex gap-2 flex-wrap items-center my-4">
+                               <!-- poner logo -->
+                                
+                                
+                            </ul>
+                            <div class="flex w-full gap-4">
+                                <a href="https://www.mediafire.com/file/dy908dqzojrs3ql/SetupVentas.zip/file" target="_blank" class="flex flex-row-reverse items-center gap-2 px-4 py-2 bg-zinc-300 text-black text-lg md:text-xl font-bold rounded-lg group/hover">
+                                    <span>
+                                        <svg class="size-5 duration-300 ease-in-out transition group-hover/hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                                            <path d="M11 13l9 -9"></path>
+                                            <path d="M15 4h5v5"></path>
+                                        </svg>
+                                    </span>
+                                    Live
+
+                                </a>
+                                <a href="https://github.com/Cesard1/Sistema-ventas" target="_blank" class="flex flex-row-reverse items-center gap-2 px-4 py-2 bg-zinc-300 text-black text-lg md:text-xl font-bold rounded-lg group/hover">
+                                    <span>
+                                        <svg class="size-5 duration-300 ease-in-out transition group-hover/hover:scale-110" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                            <path d="M9 15l6 -6"></path>
+                                            <path d="M11 6l.463 -.536a5 5 0 0 1 7.071 7.072l-.534 .464"></path>
+                                            <path d="M13 18l-.397 .534a5.068 5.068 0 0 1 -7.127 0a4.972 4.972 0 0 1 0 -7.071l.524 -.463"></path>
+                                        </svg>
+                                    </span>
+                                    Code
+
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="habilidades" class="w-full md:w-[720px] container mx-auto pt-20 pb-20">
+                <h2 class="flex gap-2 items-center text-4xl md:text-5xl font-extrabold mb-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="size-10 md:size-12" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M7 8l-4 4l4 4"></path>
+                        <path d="M17 8l4 4l-4 4"></path>
+                        <path d="M14 4l-4 16"></path>
+                    </svg>
+                    <span>Habilidades</span>
+                </h2>
+                <ul class="grid grid-cols-4 gap-2 text-center mb-12">
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="40px" height="40px">
+                                <path d="M 28.1875 0 C 30.9375 6.363281 18.328125 10.292969 17.15625 15.59375 C 16.082031 20.464844 24.648438 26.125 24.65625 26.125 C 23.355469 24.109375 22.398438 22.449219 21.09375 19.3125 C 18.886719 14.007813 34.535156 9.207031 28.1875 0 Z M 36.5625 8.8125 C 36.5625 8.8125 25.5 9.523438 24.9375 16.59375 C 24.6875 19.742188 27.847656 21.398438 27.9375 23.6875
+                                 C 28.011719 25.558594 26.0625 27.125 26.0625 27.125 C 26.0625 27.125 29.609375 26.449219 30.71875 23.59375 C 31.949219 20.425781 28.320313 18.285156 28.6875 15.75 C 29.039063 13.324219 36.5625 8.8125 36.5625 8.8125 Z M 19.1875 25.15625 C 19.1875 25.15625 9.0625 25.011719 9.0625 27.875 C 9.0625 30.867188 22.316406 31.089844 31.78125 29.25 C 31.78125 29.25 34.296875 27.519531 34.96875 26.875
+                                  C 28.765625 28.140625 14.625 28.28125 14.625 27.1875 C 14.625 26.179688 19.1875 25.15625 19.1875 25.15625 Z M 38.65625 25.15625 C 37.664063 25.234375 36.59375 25.617188 35.625 26.3125 C 37.90625 25.820313
+                                 39.84375 27.234375 39.84375 28.84375 C 39.84375 32.46875 34.59375 35.875 34.59375 35.875 C 34.59375 35.875 42.71875 34.953125 42.71875 29 C 42.71875 26.296875 40.839844 24.984375 38.65625 25.15625 Z M 16.75 30.71875 C 15.195313 30.71875 12.875 31.9375 12.875 33.09375 C 12.875 35.417969 24.5625 37.207031 33.21875 33.8125 L 30.21875 31.96875 C 24.351563 33.847656 13.546875 33.234375 16.75
+                                  30.71875 Z M 18.1875 35.9375 C 16.058594 35.9375 14.65625 37.222656 14.65625 38.1875 C 14.65625 41.171875 27.371094 41.472656 32.40625 38.4375 L 29.21875 36.40625 C 25.457031 37.996094 16.015625 38.238281 18.1875 35.9375 Z M 11.09375 38.625 C 7.625 38.554688 5.375 40.113281 5.375 41.40625 C 5.375 48.28125 40.875 47.964844 40.875 40.9375 C 40.875 39.769531 39.527344 39.203125 39.03125 38.9375 C 41.933594 45.65625 9.96875 45.121094 9.96875 41.15625 C 9.96875 40.253906 12.320313 39.390625 14.5 39.8125 L 12.65625 38.75 C 12.113281 38.667969 11.589844 38.636719 11.09375 38.625 Z M 44.625 43.25 C 39.226563 48.367188 25.546875 50.222656 
+                                 11.78125 47.0625 C 25.542969 52.695313 44.558594 49.535156 44.625 43.25 Z"/>
+                            </svg>
+                        </span>
+                        <h3 class="font-bold">Java</h3>
+                    </li>
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="40px" height="40px">
+                                <path d="M 3.125 1 C 2.219 1 1.5030625 1.4805 1.1640625 2.3125 C 1.0570625 2.5695 1.0029531 2.8420469 1.0019531 3.1230469 C 1.0009531 4.0540469 1.6009375 4.8097188 1.9609375 5.2617188 C 2.0239375 5.3407187 2.080625 5.4110938 2.140625 5.4960938 L 2.3027344 5.7109375 C 2.4637344 5.9219375 2.6470781 6.16125 2.7050781 6.28125 C 2.7240781 6.33625 2.7492031 6.4326875 2.7832031 6.5546875 C 2.9402031 7.1196875 3.2332187 8.16975 3.6992188 8.96875 C 3.8872187 9.29075 4.1517969 9.6954687 4.3417969 9.9804688 C 4.2147969 10.616469 4 11.788 4 12.5 C 4 13.75 4.2592188 14.753875 4.8242188 15.671875 C 5.0332187 15.999875 5.671 17 6.75 17 C 7.133 17 7.7694062 16.850391 7.9414062 15.900391 C 8.7064063 16.887391 10 18.125 12 19 C 12 19 8.2507969 14.625438 7.5917969 11.898438 C 7.5917969 11.898437 6.874625 12.625375 6.265625 14.109375 C 6.083625 13.651375 6 13.135 6 12.5 C 6 11.873 6.2758125 10.471375 6.3828125 9.984375 L 6.4765625 9.5605469 L 6.2304688 9.203125 C 6.2264687 9.196125 5.7227344 8.4688906 5.4277344 7.9628906 C 5.0917344 7.3868906 4.8439375 6.4955781 4.7109375 6.0175781 C 4.6459375 5.7845781 4.594875 5.6159531 4.546875 5.5019531 C 4.371875 
+                                5.1229531 4.115625 4.7900937 3.890625 4.4960938 L 3.765625 4.3300781 C 3.702625 4.2390781 3.6193906 4.133625 3.5253906 4.015625 C 3.3423906 3.785625 3.0017188 3.3570312
+                                 3.0117188 3.0820312 L 3.1230469 3.0039062 L 3.125 3 C 3.92 3 4.9440781 3.5643437 5.3300781 3.7773438 C 5.4560781 3.8463438 5.5486563 3.8940156 5.5976562 3.9160156 L 5.7714844 3.9921875 L 6.1132812 4.0039062 C 6.5602813 4.0139062 7.9189063 4.0456875 8.8789062 4.4296875 C 10.629906 5.1296875 11.598031 5.830375 12.582031 7.109375 C 14.906031 10.131375 15.763484 14.044984 15.771484 14.083984 L 15.896484 14.648438 L 16.443359 14.826172 C 16.462359 14.833172 17.992922 15.344641 19.419922 16.681641 C 17.624922 17.125641 17 18 17 18 C 17 18 17.476 18.928 19.75 20.375 C 21.125 21.25 21.875 21.875 23 23 C 23 23 21.875688 20.499813 20.304688 18.507812 C 21.500687 18.124813 22.970703 17.925781 22.970703 17.925781 L 22.060547 16.664062 C 20.562547 14.587063 18.553656 13.538859 17.597656 13.130859 C 17.265656 11.864859 16.262969 8.614625 14.167969 5.890625 C 12.968969 4.331625 11.693094 3.3993125 9.6210938 2.5703125 C 8.3940937 2.0803125 6.9187188 2.0218594 6.2617188 2.0058594 C 5.6867187 1.6898594 4.409 1 3.125 1 z M 7.1875 5 C 7.1875 5 6.75 5 6.25 5.125 L 7.625 6.9980469 C 8 6.5000469 8 5.9179688 8 5.9179688 C 8 5.9179688 7.7505 5.25 7.1875 5 z"/>
+                                 </svg>
+                        </span>
+                        <h3 class="font-bold">MySQL</h3>
+                    </li>
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px" clip-rule="evenodd" baseProfile="basic">
+                                <path d="M42.924,16.01c-0.1-0.358-0.294-0.685-0.563-0.948c-0.135-0.131-0.288-0.247-0.458-0.342	c-3.356-1.883-13.452-7.551-16.807-9.434c-0.678-0.381-1.514-0.381-2.193,0C19.549,7.169,9.451,12.837,6.097,14.72	c-0.509,0.286-0.872,0.753-1.021,1.291C5.026,16.19,5,16.376,5,16.567v0c0,3.766,0,15.101,0,18.867c0,0.762,0.418,1.465,1.096,1.846	c1.258,0.706,3.465,1.945,5.908,3.316c2.85,1.6,6.023,3.381,8.39,4.71c1.014,0.569,1.88,1.055,2.509,1.409	c0.169,0.095,0.349,0.167,0.533,0.214C23.621,46.976,23.81,47,23.999,47s0.379-0.024,0.563-0.071	c0.184-0.048,0.364-0.119,0.534-0.214c3.356-1.883,13.452-7.551,16.807-9.434C42.582,36.899,43,36.195,43,35.433	c0-3.766,0-15.101,0-18.867C43,16.375,42.974,16.189,42.924,16.01z"/>
+                                <path fill="#fff" fill-rule="evenodd" d="M22.954,4.24c0.648-0.363,1.445-0.363,2.092,0	c3.2,1.796,12.832,7.203,16.033,9c0.648,0.362,1.046,1.034,1.046,1.761c0,3.593,0,14.406,0,17.998c0,0.727-0.399,1.398-1.046,1.762	c-3.2,1.796-12.832,7.203-16.033,9c-0.648,0.363-1.445,0.363-2.092,0c-3.2-1.796-12.832-7.203-16.033-9	C6.274,34.397,5.875,33.726,5.875,33c0-3.593,0-14.406,0-17.998c0-0.727,0.399-1.398,1.046-1.762	C10.121,11.443,19.754,6.036,22.954,4.24z" clip-rule="evenodd"/>
+                                <path d="M24,5c0.029,0,0.073,0.005,0.117,0.03l5.847,3.282l10.962,6.153C40.972,14.491,41,14.529,41,14.566v18.867	c0,0.037-0.029,0.077-0.076,0.103l-6.288,3.53L24.117,42.97C24.073,42.995,24.029,43,23.999,43c-0.029,0-0.073-0.005-0.117-0.03	l-6.092-3.42L7.076,33.536C7.029,33.51,7,33.471,7,33.434V14.567c0-0.037,0.029-0.077,0.076-0.103l8.235-4.623l8.571-4.811	C23.926,5.005,23.97,5,24,5 M24,3c-0.379,0-0.757,0.095-1.097,0.286C19.549,5.169,9.451,10.837,6.097,12.72	C5.418,13.101,5,13.805,5,14.567c0,3.766,0,15.101,0,18.867c0,0.762,0.418,1.465,1.096,1.846c3.356,1.883,13.452,7.551,16.807,9.434	C23.242,44.904,23.62,45,23.999,45s0.757-0.095,1.097-0.286c3.356-1.883,13.452-7.551,16.807-9.434	C42.582,34.899,43,34.195,43,33.433c0-3.766,0-15.101,0-18.867c0-0.762-0.418-1.466-1.097-1.846	c-3.356-1.883-13.452-7.551-16.807-9.434C24.757,3.096,24.379,3,24,3L24,3z"/>
+                                <rect width="2" height="6" x="28" y="21" fill-rule="evenodd" clip-rule="evenodd"/>
+                                <rect width="2" height="6" x="35" y="21" fill-rule="evenodd" clip-rule="evenodd"/>
+                                <rect width="6" height="2" x="26" y="23" fill-rule="evenodd" clip-rule="evenodd"/>
+                                <rect width="6" height="2" x="33" y="23" fill-rule="evenodd" clip-rule="evenodd"/>
+                                <path d="M22,37c-7.168,0-13-5.832-13-13s5.832-13,13-13c3.816,0,7.43,1.679,9.912,4.607c0.192,0.227,0.273,0.527,0.223,0.82	c-0.052,0.293-0.231,0.547-0.489,0.695l-3.56,2.034c-0.389,0.222-0.877,0.159-1.195-0.153C25.571,17.711,23.834,17,22,17	c-3.859,0-7,3.14-7,7s3.141,7,7,7c1.897,0,3.677-0.754,5.009-2.123c0.314-0.322,0.806-0.394,1.199-0.178l3.59,1.975	c0.259,0.143,0.442,0.394,0.499,0.684c0.057,0.291-0.019,0.592-0.205,0.822C29.604,35.243,25.926,37,22,37z M22,13	c-6.065,0-11,4.935-11,11s4.935,11,11,11c2.917,0,5.672-1.147,7.727-3.183l-1.845-1.015C26.245,32.225,24.185,33,22,33	c-4.963,0-9-4.038-9-9s4.037-9,9-9c2.105,0,4.109,0.727,5.721,2.061l1.829-1.045C27.513,14.086,24.822,13,22,13z"/>
+                                </svg>
+                        </span>
+                        <h3 class="font-bold">C++</h3>
+                    </li>
+                </ul>
+                <h2 class="flex gap-2 items-center text-4xl md:text-5xl font-extrabold mb-8">
+                    <svg class="size-10 md:size-12" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M19.5 12.572l-.536 .53m-7.91 5.96l-6.554 -6.489a5 5 0 1 1 7.5 -6.567a5 5 0 1 1 7.5 6.572"></path>
+                        <path d="M20 21l2 -2l-2 -2"></path>
+                        <path d="M17 17l-2 2l2 2"></path>
+                    </svg>
+                    <span>Focus</span>
+                </h2>
+                <ul class="grid grid-cols-4 gap-2 text-center">
+                    
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 " width="48px" height="48px"><path fill="#5d4037" d="M42,17.3C42,37.8,24,44,24,44S6,37.8,6,17.3c0-2.5,0.2-4.6,0.4-6.3c0.3-2.5,2-4.5,4.4-5.1 C13.9,5,18.8,4,24,4s10.1,1,13.3,1.9c2.4,0.6,4.1,2.7,4.4,5.1C41.8,12.7,42,14.9,42,17.3z"/><path fill="#4caf50" d="M24,7c4.9,0,9.5,1,12.5,1.8c1.2,0.3,2,1.3,2.2,2.6c0.2,1.9,0.3,3.9,0.3,5.9c0,15.6-11.5,21.9-15,23.4 c-3.5-1.6-15-7.9-15-23.4c0-2,0.1-4,0.3-5.9c0.1-1.3,1-2.3,2.2-2.6C14.5,8,19.1,7,24,7 M24,4c-5.2,0-10.1,1-13.3,1.9 C8.4,6.5,6.6,8.6,6.4,11C6.2,12.7,6,14.9,6,17.3C6,37.8,24,44,24,44s18-6.2,18-26.7c0-2.5-0.2-4.6-0.4-6.3c-0.3-2.5-2-4.5-4.4-5.1 C34.1,5,29.2,4,24,4L24,4z"/><path fill="#dcedc8" d="M23 28H25V36H23z"/><path fill="#4caf50" d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3l1,3c1.7-1.5,5-4.8,5-10C30,15,24,10,24,10z"/><path fill="#81c784" d="M24,10c0,0-6,5-6,13c0,5.2,3.3,8.5,5,10l1-3V10z"/></svg>
+                        </span>
+                        <h3 class="font-bold">MongoDB</h3>
+                    </li>
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="38px" height="38px"><path d="M 25 2 C 20.941406 2 18.1875 2.96875 16.4375 4.375 C 14.6875 5.78125 14 7.589844 14 9.09375 L 14 14 L 24 14 L 24 15 L 9.09375 15 C 7.265625 15 5.410156 15.792969 4.09375 17.46875 C 2.777344 19.144531 2 21.644531 2 25 C 2 28.355469 2.777344 30.855469 4.09375 32.53125 C 5.410156 34.207031 7.265625 35 9.09375 35 L 14 35 L 14 40.90625 C 14 42.410156 14.6875 44.21875 16.4375 45.625 C 18.1875 47.03125 20.941406 48 25 48 C 29.058594 48 31.8125 47.03125 33.5625 45.625 C 35.3125 44.21875 36 42.410156 36 40.90625 L 36 36 L 26 36 L 26 35 L 40.90625 35 C 42.734375 35 44.589844 34.207031 45.90625 32.53125 C 47.222656 30.855469 48 28.355469 48 25 C 48 21.644531 47.222656 19.144531 45.90625 17.46875 C 44.589844 15.792969 42.734375 15 40.90625 15 L 36 15 L 36 9.09375 C 36 7.550781 35.316406 5.738281 33.5625 4.34375 C 31.808594 2.949219 29.054688 2 25 2 Z M 25 4 C 28.746094 4 31.015625 4.875 32.3125 5.90625 C 33.609375 6.9375 34 8.136719 34 9.09375 L 34 21 C 34 22.65625 32.65625 24 31 24 L 19 24 C 16.941406 24 15.167969 25.269531 14.40625 27.0625 C 14.277344 27.359375 14.160156 27.675781 14.09375 28 C 14.027344 28.324219 14 28.65625 14 29 L 14 33 L 9.09375 33 C 7.824219 33 6.648438 32.503906 5.6875 31.28125 C 4.726563 30.058594 4 28.042969 4 25 C 4 21.957031 4.726563 19.941406 5.6875 18.71875 C 6.648438 17.496094 7.824219 17 9.09375 17 L 26 17 L 26 12 L 16 12 L 16 9.09375 C 16 8.199219 16.386719 6.980469 17.6875 5.9375 C 18.988281 4.894531 21.257813 4 25 4 Z M 20 7 C 18.898438 7 18 7.898438 18 9 C 18 10.101563 18.898438 11 20 11 C 21.101563 11 22 10.101563 22 9 C 22 7.898438 21.101563 7 20 7 Z M 36 17 L 40.90625 17 C 42.175781 17 43.351563 17.496094 44.3125 18.71875 C 45.273438 19.941406 46 21.957031 46 25 C 46 28.042969 45.273438 30.058594 44.3125 31.28125 C 43.351563 32.503906 42.175781 33 40.90625 33 L 24 33 L 24 38 L 34 38 L 34 40.90625 C 34 41.800781 33.613281 43.019531 32.3125 44.0625 C 31.011719 45.105469 28.742188 46 25 46 C 21.257813 46 18.988281 45.105469 17.6875 44.0625 C 16.386719 43.019531 16 41.800781 16 40.90625 L 16 29 C 16 28.792969 16.023438 28.601563 16.0625 28.40625 C 16.34375 27.039063 17.550781 26 19 26 L 31 26 C 33.746094 26 36 23.746094 36 21 Z M 30 39 C 28.898438 39 28 39.898438 28 41 C 28 42.101563 28.898438 43 30 43 C 31.101563 43 32 42.101563 32 41 C 32 39.898438 31.101563 39 30 39 Z"/></svg>
+                        </span>
+                        <h3 class="font-bold">phyton</h3>
+                    </li>
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg class="size-5" viewBox="0 0 256 289" width="256" height="289" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+                                <path d="M128 288.464c-3.975 0-7.685-1.06-11.13-2.915l-35.247-20.936c-5.3-2.915-2.65-3.975-1.06-4.505 7.155-2.385 8.48-2.915 15.9-7.156.796-.53 1.856-.265 2.65.265l27.032 16.166c1.06.53 2.385.53 3.18 0l105.74-61.217c1.06-.53 1.59-1.59 1.59-2.915V83.08c0-1.325-.53-2.385-1.59-2.915l-105.74-60.953c-1.06-.53-2.385-.53-3.18 0L20.405 80.166c-1.06.53-1.59 1.855-1.59 2.915v122.17c0 1.06.53 2.385 1.59 2.915l28.887 16.695c15.636 7.95 25.44-1.325 25.44-10.6V93.68c0-1.59 1.326-3.18 3.181-3.18h13.516c1.59 0 3.18 1.325 3.18 3.18v120.58c0 20.936-11.396 33.126-31.272 33.126-6.095 0-10.865 0-24.38-6.625l-27.827-15.9C4.24 220.885 0 213.465 0 205.515V83.346C0 75.396 4.24 67.976 11.13 64L116.87 2.783c6.625-3.71 15.635-3.71 22.26 0L244.87 64C251.76 67.975 256 75.395 256 83.346v122.17c0 7.95-4.24 15.37-11.13 19.345L139.13 286.08c-3.445 1.59-7.42 2.385-11.13 2.385Zm32.596-84.009c-46.377 0-55.917-21.2-55.917-39.221 0-1.59 1.325-3.18 3.18-3.18h13.78c1.59 0 2.916 1.06 2.916 2.65 2.12 14.045 8.215 20.936 36.306 20.936 22.261 0 31.802-5.035 31.802-16.96 0-6.891-2.65-11.926-37.367-15.372-28.886-2.915-46.907-9.275-46.907-32.33 0-21.467 18.02-34.187 48.232-34.187 33.921 0 50.617 11.66 52.737 37.101 0 .795-.265 1.59-.795 2.385-.53.53-1.325 1.06-2.12 1.06h-13.78c-1.326 0-2.65-1.06-2.916-2.385-3.18-14.575-11.395-19.345-33.126-19.345-24.38 0-27.296 8.48-27.296 14.84 0 7.686 3.445 10.07 36.306 14.31 32.597 4.24 47.967 10.336 47.967 33.127-.265 23.321-19.345 36.571-53.002 36.571Z" fill="#539E43"></path>
+                            </svg>
+                        </span>
+                        <h3 class="font-bold">NodeJS</h3>
+                    </li>
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                            <svg width="38px" height="38px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" fill="#8892BF"/>
+                            <path d="M14.4392 10H16.1192L15.6444 12.5242H17.154C17.9819 12.5419 18.5986 12.7269 19.0045 13.0793C19.4184 13.4316 19.5402 14.1014 19.3698 15.0881L18.5541 19.4889H16.8497L17.6288 15.2863C17.7099 14.8457 17.6856 14.533 17.5558 14.348C17.426 14.163 17.146 14.0705 16.7158 14.0705L15.3644 14.0573L14.3661 19.4889H12.6861L14.4392 10Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.74092 12.5243H10.0036C10.9612 12.533 11.6552 12.8327 12.0854 13.4229C12.5156 14.0132 12.6576 14.8193 12.5115 15.8414C12.4548 16.3085 12.3289 16.7665 12.1341 17.2159C11.9474 17.6652 11.6878 18.0704 11.355 18.4317C10.9491 18.8898 10.5149 19.1805 10.0523 19.304C9.58969 19.4274 9.11076 19.489 8.61575 19.489H7.15484L6.69222 22H5L6.74092 12.5243ZM7.43485 17.9956L8.16287 14.0441H8.40879C8.49815 14.0441 8.5914 14.0396 8.6888 14.0309C9.33817 14.0221 9.87774 14.0882 10.308 14.2291C10.7462 14.37 10.8923 14.9031 10.7462 15.8282C10.5678 16.9296 10.2186 17.5727 9.69926 17.7577C9.1799 17.934 8.53053 18.0176 7.75138 18.0088H7.58094C7.53224 18.0088 7.48355 18.0043 7.43485 17.9956Z" fill="white"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.4365 12.5243H21.1738L19.4329 22H21.1251L21.5878 19.489H23.0487C23.5437 19.489 24.0226 19.4274 24.4852 19.304C24.9479 19.1805 25.382 18.8898 25.7879 18.4317C26.1207 18.0704 26.3803 17.6652 26.567 17.2159C26.7618 16.7665 26.8877 16.3085 26.9444 15.8414C27.0905 14.8193 26.9486 14.0132 26.5183 13.4229C26.0881 12.8327 25.3942 12.533 24.4365 12.5243ZM22.5958 14.0441L21.8678 17.9956C21.9165 18.0043 21.9652 18.0088 22.0139 18.0088H22.1843C22.9635 18.0176 23.6128 17.934 24.1322 17.7577C24.6515 17.5727 25.0007 16.9296 25.1792 15.8282C25.3253 14.9031 25.1792 14.37 24.7409 14.2291C24.3107 14.0882 23.7711 14.0221 23.1217 14.0309C23.0243 14.0396 22.9311 14.0441 22.8417 14.0441H22.5958Z" fill="white"/>
+                            </svg>
+                        </span>
+                        <h3 class="font-bold">PHP</h3>
+                        
+                    </li>
+                    <li class="col-span-2 md:col-span-1 size-full flex items-center gap-2 p-4 bg-slate-900 border-slate-700 rounded-md">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="38px" height="38px"><path d="M 5 4 A 1.0001 1.0001 0 0 0 4 5 L 4 24 L 4 45 A 1.0001 1.0001 0 0 0 4 45.005859 A 1.0001 1.0001 0 0 0 4.0039062 45.0625 A 1.0001 1.0001 0 0 0 4.0078125 45.111328 A 1.0001 1.0001 0 0 0 4.0097656 45.123047 A 1.0001 1.0001 0 0 0 4.0234375 45.212891 A 1.0001 1.0001 0 0 0 4.0449219 45.294922 A 1.0001 1.0001 0 0 0 4.0625 45.34375 A 1.0001 1.0001 0 0 0 4.0859375 45.402344 A 1.0001 1.0001 0 0 0 4.1289062 45.486328 A 1.0001 1.0001 0 0 0 4.15625 45.533203 A 1.0001 1.0001 0 0 0 4.1777344 45.568359 A 1.0001 1.0001 0 0 0 4.2167969 45.619141 A 1.0001 1.0001 0 0 0 4.2402344 45.648438 A 1.0001 1.0001 0 0 0 4.28125 45.693359 A 1.0001 1.0001 0 0 0 4.3066406 45.720703 A 1.0001 1.0001 0 0 0 4.3730469 45.777344 A 1.0001 1.0001 0 0 0 4.3789062 45.783203 A 1.0001 1.0001 0 0 0 4.4492188 45.833984 A 1.0001 1.0001 0 0 0 4.4628906 45.84375 A 1.0001 1.0001 0 0 0 4.4726562 45.849609 A 1.0001 1.0001 0 0 0 4.546875 45.890625 A 1.0001 1.0001 0 0 0 4.6386719 45.931641 A 1.0001 1.0001 0 0 0 4.6992188 45.953125 A 1.0001 1.0001 0 0 0 4.7421875 45.964844 A 1.0001 1.0001 0 0 0 4.7480469 45.966797 A 1.0001 1.0001 0 0 0 4.8300781 45.984375 A 1.0001 1.0001 0 0 0 4.890625 45.992188 A 1.0001 1.0001 0 0 0 4.9453125 45.998047 A 1.0001 1.0001 0 0 0 4.9648438 45.998047 A 1.0001 1.0001 0 0 0 5 46 A 1.0001 1.0001 0 0 0 5.0292969 46 L 45 46 A 1.0001 1.0001 0 0 0 45.707031 44.292969 L 26.414062 25 L 45.707031 5.7070312 A 1.0001 1.0001 0 0 0 45 4 L 24 4 L 5 4 z M 6 6 L 21.585938 6 L 6 21.585938 L 6 6 z M 24.414062 6 L 42.585938 6 L 24.292969 24.292969 L 6 42.585938 L 6 24.414062 L 24.414062 6 z M 25 26.414062 L 42.585938 44 L 7.4140625 44 L 25 26.414062 z"/></svg>
+                        </span>
+                        <h3 class="font-bold">Kotlin</h3>
+                        
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer id="contacto" class="md:w-[720px] container mx-auto pb-8 px-4 z-20 md:px-0">
+            <div class="mb-8">
+                <h2 class="flex gap-2 items-center text-4xl md:text-5xl font-extrabold mb-8">
+                    <svg class="size-10 md:size-12" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" stroke-width="0" fill="currentColor"></path>
+                        <path d="M19 4c1.08 0 2.027 .57 2.555 1.427l-9.555 6.37l-9.555 -6.37a2.999 2.999 0 0 1 2.354 -1.42l.201 -.007h14z" stroke-width="0" fill="currentColor"></path>
+                    </svg>
+                    <span>Contacto</span>
+                </h2>
+                <div class="grid grid-cols-8 flex-wrap md:flex-nowrap items-center gap-3">
+                    <article class="col-span-8 md:col-span-6 w-full px-4 py-2 border-2 bg-slate-900 border-slate-700 rounded-xl overflow-hidden line-clamp-1">
+                        <input readonly id="email" class="text-lg bg-transparent w-full" value="hernandecesar66@gmail.com">
+                    </article>
+                    <a href="mailto:hernandecesar66@gmail.com" class="col-span-4 md:col-span-1 relative px-4 py-2 group/copy text-black bg-sky-300 rounded-lg grid place-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M4.698 4.034l16.302 7.966l-16.302 7.966a.503 .503 0 0 1 -.546 -.124a.555 .555 0 0 1 -.12 -.568l2.468 -7.274l-2.468 -7.274a.555 .555 0 0 1 .12 -.568a.503 .503 0 0 1 .546 -.124z"></path>
+                            <path d="M6.5 12h14.5"></path>
+                        </svg>
+                        <span class="absolute top-0 left-[50%] -translate-x-[50%] -translate-y-12 px-4 py-2 rounded-xl bg-white text-black w-[125px] transition-all duration-200 ease-out opacity-0 group-hover/copy:opacity-100 text-center">Enviar email</span>
+                    </a>
+                    <button id="button-copy-email" class="col-span-4 md:col-span-1 relative px-4 py-2 group/copy text-black bg-sky-300 rounded-lg grid place-content-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"></path>
+                            <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"></path>
+                        </svg>
+                        <span id="tooltip-email" class="absolute top-0 left-[50%] -translate-x-[50%] -translate-y-12 px-4 py-2 rounded-xl bg-white text-black w-[125px] transition-all duration-200 ease-out opacity-0 group-hover/copy:opacity-100 text-center">Copiar email</span>
+                    </button>
+                </div>
+            </div>
+            
+        </footer>
+    </body>
+</html>
